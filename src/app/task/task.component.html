@@ -1,0 +1,52 @@
+<div class="container">
+
+<h2>Employee Task Management</h2>
+
+<div class="form">
+  <input type="text" placeholder="Employee Name" [(ngModel)]="name">
+  <input type="text" placeholder="Task" [(ngModel)]="task">
+  <input type="text" placeholder="Duration" [(ngModel)]="duration">
+  <input type="text" placeholder="Status" [(ngModel)]="status">
+
+  <button (click)="addEmployee()">Add Employee</button>
+  <button (click)="exportToExcel()">Export to Excel</button>
+</div>
+
+<table>
+
+<thead>
+<tr>
+<th>Employee Name</th>
+<th>Task</th>
+<th>Duration</th>
+<th>Status</th>
+<th>Action</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr *ngFor="let emp of employees; let i=index">
+
+<td>{{emp.name}}</td>
+<td>{{emp.task}}</td>
+<td>{{emp.duration}}</td>
+
+<td>
+<span [ngClass]="emp.status == 'Completed' ? 'done' : 'pending'">
+{{emp.status}}
+</span>
+</td>
+
+<td>
+<button (click)="toggleStatus(i)">Update Status</button>
+<button class="delete" (click)="deleteEmployee(i)">Delete</button>
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</div>

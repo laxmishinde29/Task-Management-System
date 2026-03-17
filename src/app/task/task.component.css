@@ -1,0 +1,51 @@
+.container{
+    width:900px;
+    margin:auto;
+    text-align:center;
+}
+
+.form{
+    margin-bottom:20px;
+}
+
+input{
+    padding:8px;
+    margin:5px;
+}
+
+button{
+    padding:8px 12px;
+    background:#007bff;
+    color:white;
+    border:none;
+}
+
+.delete{
+    background:red;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+th{
+    background:#1976d2;
+    color:white;
+    padding:10px;
+}
+
+td{
+    border:1px solid #ccc;
+    padding:10px;
+}
+
+.done{
+    color:green;
+    font-weight:bold;
+}
+
+.pending{
+    color:red;
+    font-weight:bold;
+}
